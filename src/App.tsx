@@ -7,6 +7,32 @@ import Sidebar from './components/Siderbar'
 import Chart from './components/Chart'
 import DataTable from './DataTable/DataTable'
 
+interface SalesData {
+  weekEnding: string;
+  retailSales: number;
+  wholesalesSales: number; 
+  unitsSold: number;
+  retailerMargin: number;
+}
+
+interface ProductData {
+  id: string;
+  tittle: string;
+  image: string;
+  subtitle: string;
+  brand: string;
+  reviews: Array<{
+    customer: string;
+    review: string;
+    score: number;
+  }>
+  retailer: string;
+  details: string[];
+  tags: string[];
+  sales: SalesData[];
+}
+
+
 function App() {
   return (
     <>

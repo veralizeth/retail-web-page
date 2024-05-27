@@ -12,7 +12,7 @@ import { fetchData } from './api';
 export interface SalesData {
   weekEnding: string;
   retailSales: number;
-  wholesalesSales: number;
+  wholesaleSales: number;
   unitsSold: number;
   retailerMargin: number;
 }

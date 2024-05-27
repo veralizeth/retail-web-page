@@ -5,7 +5,11 @@ import { Link as RouterLink } from 'react-router-dom';
 const Sidebar: React.FC = () => {
   return (
     <Paper style={{ padding: 16 }}>
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg" alt="Product" style={{ width: '100%' }} />
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg"
+        alt="Product"
+        style={{ width: '100%' }}
+      />
       <Typography variant="h6">Shark Ninja</Typography>
       <Typography variant="body2">
         Magic Bullet NutriBullet 12-Piece High-Speed Blender/Mixer System

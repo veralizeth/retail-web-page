@@ -63,8 +63,8 @@ const App: React.FC = () => {
           <Grid item xs={12} md={9}>
             <Routes>
               <Route path="/" element={<Chart />} />
-              <Route path="/table" element={<DataTable />} />
             </Routes>
+            <DataTable />
           </Grid>
         </Grid>
       </Container>

@@ -20,9 +20,9 @@ const Sidebar: React.FC = () => {
         <Link component={RouterLink} to="/" style={{ marginRight: 16 }}>
           Chart
         </Link>
-        <Link component={RouterLink} to="/table">
+        {/* <Link component={RouterLink} to="/table">
           Data Table
-        </Link>
+        </Link> */}
       </div>
     </Paper>
   );

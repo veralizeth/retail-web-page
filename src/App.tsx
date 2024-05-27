@@ -88,7 +88,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Chart salesData={product.sales}/>} />
             </Routes>
-            <DataTable />
+            <DataTable salesData={product.sales}/>
           </Grid>
         </Grid>
       </Container>

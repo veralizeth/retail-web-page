@@ -8,6 +8,7 @@ import {
   TableRow,
   Paper,
 } from '@mui/material';
+import { SalesData } from '../App';
 
 const rows = [
   {
@@ -26,7 +27,11 @@ const rows = [
   },
 ];
 
-const DataTable: React.FC = () => {
+interface DataTableProps {
+  salesData: SalesData[];
+}
+
+const DataTable: React.FC<DataTableProps> = ({ salesData }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -40,13 +45,13 @@ const DataTable: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row, index) => (
+          {salesData.map((salesData, index) => (
             <TableRow key={index}>
-              <TableCell>{row.weekEnding}</TableCell>
-              <TableCell>{row.retailSales}</TableCell>
-              <TableCell>{row.wholesaleSales}</TableCell>
-              <TableCell>{row.unitsSold}</TableCell>
-              <TableCell>{row.retailerMargin}</TableCell>
+              <TableCell>{salesData.weekEnding}</TableCell>
+              <TableCell>{salesData.retailSales}</TableCell>
+              <TableCell>{salesData.wholesaleSales}</TableCell>
+              <TableCell>{salesData.unitsSold}</TableCell>
+              <TableCell>{salesData.retailerMargin}</TableCell>
             </TableRow>
           ))}
         </TableBody>

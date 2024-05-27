@@ -2,23 +2,28 @@ import React from 'react';
 import { Paper, Typography, Chip, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  title: string;
+  image: string;
+  subtitle: string;
+  tags: string[];
+}
+
+// It is always a good practice to pass the name of the props instead of just props.
+const Sidebar: React.FC<SidebarProps> = ({ title, image, subtitle, tags }) => {
   return (
     <Paper style={{ padding: 16 }}>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg"
-        alt="Product"
-        style={{ width: '100%' }}
-      />
-      <Typography variant="h6">Shark Ninja</Typography>
-      <Typography variant="body2">
-        Magic Bullet NutriBullet 12-Piece High-Speed Blender/Mixer System
-      </Typography>
+      <img src={image} alt="Product" style={{ width: '100%' }} />
+      <Typography variant="h6">{title}</Typography>
+      <Typography variant="body2">{subtitle}</Typography>
       <div style={{ marginTop: 16 }}>
-        <Chip label="Pantry" />
-        <Chip label="Obsolete" />
-        <Chip label="Blender" />
-        <Chip label="Lightning Deal" />
+        {tags.map((tag, index) => (
+          <Chip
+            key={index}
+            label={tag}
+            style={{ margin: 4, marginBottom: 4 }}
+          />
+        ))}
       </div>
       <div style={{ marginTop: 16 }}>
         <Link component={RouterLink} to="/" style={{ marginRight: 16 }}>

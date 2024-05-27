@@ -9,7 +9,7 @@ import DataTable from './DataTable/DataTable';
 import { fetchData } from './api';
 
 // Defining interfaces based on data.json.
-interface SalesData {
+export interface SalesData {
   weekEnding: string;
   retailSales: number;
   wholesalesSales: number;
@@ -68,6 +68,7 @@ const App: React.FC = () => {
 
   // Display the first product always.
   const product = data[0];
+  
 
   return (
     <>
@@ -85,7 +86,7 @@ const App: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={9}>
             <Routes>
-              <Route path="/" element={<Chart />} />
+              <Route path="/" element={<Chart salesData={product.sales}/>} />
             </Routes>
             <DataTable />
           </Grid>

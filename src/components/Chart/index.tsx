@@ -9,6 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import { SalesData } from '../../App';
 
 //Mock data to test Layout
 const data = [
@@ -17,7 +18,12 @@ const data = [
   { name: 'MAR', RetailSales: 2000, WholesaleSales: 9800 },
 ];
 
-const Chart: React.FC = () => {
+interface ChartProps {
+  salesData: SalesData[];
+}
+
+const Chart: React.FC<ChartProps> = ({ salesData }) => {
+  
   return (
     <ResponsiveContainer width="100%" height={400}>
       <LineChart data={data}>

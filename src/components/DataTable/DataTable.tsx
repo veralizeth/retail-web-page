@@ -10,22 +10,6 @@ import {
 } from '@mui/material';
 import { SalesData } from '../../App';
 
-const rows = [
-  {
-    weekEnding: '2017-01-01',
-    retailSales: '348123',
-    wholesaleSales: '255721',
-    unitsSold: 887,
-    retailerMargin: '123294',
-  },
-  {
-    weekEnding: '2017-01-08',
-    retailSales: '256908',
-    wholesaleSales: '189678',
-    unitsSold: 558,
-    retailerMargin: '67230',
-  },
-];
 
 interface DataTableProps {
   salesData: SalesData[];

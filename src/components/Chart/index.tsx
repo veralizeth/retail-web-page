@@ -12,13 +12,6 @@ import {
 import { SalesData } from '../../App';
 import calculateMonthlySums from './calculateMonthlySums';
 
-//Mock data to test Layout
-const data = [
-  { name: 'JAN', RetailSales: 4000, WholesaleSales: 2400 },
-  { name: 'FEB', RetailSales: 3000, WholesaleSales: 1398 },
-  { name: 'MAR', RetailSales: 2000, WholesaleSales: 9800 },
-];
-
 interface ChartProps {
   salesData: SalesData[];
 }

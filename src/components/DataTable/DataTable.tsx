@@ -8,7 +8,7 @@ import {
   TableRow,
   Paper,
 } from '@mui/material';
-import { SalesData } from '../App';
+import { SalesData } from '../../App';
 
 const rows = [
   {

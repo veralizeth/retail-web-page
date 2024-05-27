@@ -5,7 +5,7 @@ import { Container, CssBaseline, Grid } from '@mui/material';
 import Header from './components/Header';
 import Sidebar from './components/Siderbar';
 import Chart from './components/Chart';
-import DataTable from './DataTable/DataTable';
+import DataTable from './components/DataTable/DataTable';
 import { fetchData } from './api';
 
 // Defining interfaces based on data.json.
@@ -68,7 +68,6 @@ const App: React.FC = () => {
 
   // Display the first product always.
   const product = data[0];
-  
 
   return (
     <>
@@ -86,9 +85,9 @@ const App: React.FC = () => {
           </Grid>
           <Grid item xs={12} md={9}>
             <Routes>
-              <Route path="/" element={<Chart salesData={product.sales}/>} />
+              <Route path="/" element={<Chart salesData={product.sales} />} />
             </Routes>
-            <DataTable salesData={product.sales}/>
+            <DataTable salesData={product.sales} />
           </Grid>
         </Grid>
       </Container>

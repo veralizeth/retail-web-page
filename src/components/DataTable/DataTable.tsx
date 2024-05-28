@@ -10,9 +10,9 @@ import {
 } from '@mui/material';
 import { SalesData } from '../../App';
 
-
 interface DataTableProps {
   salesData: SalesData[];
+  className?: string;
 }
 
 const DataTable: React.FC<DataTableProps> = ({ salesData }) => {

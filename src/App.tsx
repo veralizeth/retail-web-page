@@ -73,9 +73,9 @@ const App: React.FC = () => {
     <>
       <CssBaseline />
       <Header />
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={3}>
+      <Container maxWidth="lg" className="app-container">
+        <Grid container spacing={3} className="app-grid-container">
+          <Grid item xs={12} md={3} className="app-grid-item-sidebar">
             <Sidebar
               title={product.title}
               image={product.image}
@@ -83,7 +83,7 @@ const App: React.FC = () => {
               tags={product.tags}
             />
           </Grid>
-          <Grid item xs={12} md={9}>
+          <Grid item xs={12} md={9} className="app-grid-item-main">
             <Routes>
               <Route path="/" element={<Chart salesData={product.sales} />} />
             </Routes>

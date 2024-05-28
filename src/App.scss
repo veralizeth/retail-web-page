@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  max-width: 100%;
+  padding: 80px;
+}
+
+.app-grid-container {
+  margin-top: 20px;
+}
+
+.app-grid-item-sidebar {
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.app-grid-item-main {
+  background-color: #ffffff;
+  padding: 10px;
+}

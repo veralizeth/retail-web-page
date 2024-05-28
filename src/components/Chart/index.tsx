@@ -26,7 +26,10 @@ const Chart: React.FC<ChartProps> = ({ salesData }) => {
 
   return (
     <ResponsiveContainer width="100%" height={400}>
-      <LineChart data={montlySums}>
+      <LineChart
+        data={montlySums}
+        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+      >
         <CartesianGrid strokeDasharray="5 5" />
         <XAxis dataKey="name" />
         <YAxis />

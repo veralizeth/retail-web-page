@@ -22,11 +22,6 @@ const Sidebar: React.FC<SidebarProps> = ({ title, image, subtitle, tags }) => {
           <Chip key={index} label={tag} className="chip-item" />
         ))}
       </div>
-      <div className="link-container">
-        <Link component={RouterLink} to="/" className="link-item">
-          Chart
-        </Link>
-      </div>
     </Paper>
   );
 };

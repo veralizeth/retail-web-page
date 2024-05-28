@@ -15,8 +15,8 @@ const Sidebar: React.FC<SidebarProps> = ({ title, image, subtitle, tags }) => {
   return (
     <Paper className="paper-container">
       <img src={image} alt="Product" className="product-image" />
-      <Typography variant="h6">{title}</Typography>
-      <Typography variant="body2">{subtitle}</Typography>
+      <Typography className="product-title" variant="h6">{title}</Typography>
+      <Typography className="product-subtitle" variant="body2">{subtitle}</Typography>
       <div className="chip-container">
         {tags.map((tag, index) => (
           <Chip key={index} label={tag} className="chip-item" />

@@ -8,13 +8,35 @@ interface MonthtlySums {
   retailerMargin: number;
 }
 
-const calculateMonthlySums = (salesData: SalesData[]): MonthtlySums[] => {
+const monthNames = [
+  'JAN',
+  'FEB',
+  'MAR',
+  'APR',
+  'MAY',
+  'JUN',
+  'JUL',
+  'AUG',
+  'SEP',
+  'OCT',
+  'NOV',
+  'DEC',
+];
+
+const calculateMonthlySums = (
+  salesData: SalesData[],
+  year: number
+): MonthtlySums[] => {
   const monthtlySums: { [key: string]: MonthtlySums } = {};
 
   salesData.forEach((sale) => {
     const date = new Date(sale.weekEnding);
-    // Format yyyy-M
-    const month = `${date.getFullYear()}-${date.getMonth() + 1}`;
+    if (date.getFullYear() !== year) {
+      return;
+    }
+
+    const monthIndex = date.getMonth();
+    const month = monthNames[monthIndex];
 
     if (!monthtlySums[month]) {
       monthtlySums[month] = {

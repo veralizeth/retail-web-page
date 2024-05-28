@@ -16,8 +16,6 @@ const calculateMonthlySums = (salesData: SalesData[]): MonthtlySums[] => {
     // Format yyyy-M
     const month = `${date.getFullYear()}-${date.getMonth() + 1}`;
 
-    console.log(sale.wholesaleSales);
-
     if (!monthtlySums[month]) {
       monthtlySums[month] = {
         month,

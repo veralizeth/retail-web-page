@@ -19,6 +19,11 @@ interface ChartProps {
 const Chart: React.FC<ChartProps> = ({ salesData }) => {
   const montlySums = calculateMonthlySums(salesData);
 
+  // To convert the diplay key to camel case.
+  const displayKey = (key: string) => {
+    return key.charAt(0).toUpperCase() + key.slice(1);
+  };
+
   return (
     <ResponsiveContainer width="100%" height={400}>
       <LineChart data={montlySums}>
@@ -27,10 +32,30 @@ const Chart: React.FC<ChartProps> = ({ salesData }) => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="retailSales" stroke="#8884d8" />
-        <Line type="monotone" dataKey="wholesaleSales" stroke="#000000" />
-        <Line type="monotone" dataKey="unitsSold" stroke="#FF0000" />
-        <Line type="monotone" dataKey="retailerMargin" stroke="#008000" />
+        <Line
+          type="monotone"
+          dataKey="retailSales"
+          stroke="#8884d8"
+          name={displayKey('retailSales')}
+        />
+        <Line
+          type="monotone"
+          dataKey="wholesaleSales"
+          stroke="#000000"
+          name={displayKey('wholesaleSales')}
+        />
+        <Line
+          type="monotone"
+          dataKey="unitsSold"
+          stroke="#FF0000"
+          name={displayKey('unitsSold')}
+        />
+        <Line
+          type="monotone"
+          dataKey="retailerMargin"
+          stroke="#008000"
+          name={displayKey('retailerMargin')}
+        />
       </LineChart>
     </ResponsiveContainer>
   );

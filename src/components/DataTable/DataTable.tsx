@@ -9,6 +9,7 @@ import {
   Paper,
 } from '@mui/material';
 import { SalesData } from '../../App';
+import './index.scss';
 
 interface DataTableProps {
   salesData: SalesData[];
@@ -16,31 +17,53 @@ interface DataTableProps {
 }
 
 const DataTable: React.FC<DataTableProps> = ({ salesData }) => {
+  console.log(salesData);
+  const formatCurrency = (value: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(value);
+  };
+
   return (
-    <TableContainer component={Paper}>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Week Ending</TableCell>
-            <TableCell>Retail Sales</TableCell>
-            <TableCell>Wholesale Sales</TableCell>
-            <TableCell>Units Sold</TableCell>
-            <TableCell>Retailer Margin</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {salesData.map((salesData, index) => (
-            <TableRow key={index}>
-              <TableCell>{salesData.weekEnding}</TableCell>
-              <TableCell>{salesData.retailSales}</TableCell>
-              <TableCell>{salesData.wholesaleSales}</TableCell>
-              <TableCell>{salesData.unitsSold}</TableCell>
-              <TableCell>{salesData.retailerMargin}</TableCell>
+    <div className="data-table-container">
+      <TableContainer component={Paper} className="table-container">
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell className="table-cell">Week Ending</TableCell>
+              <TableCell className="table-cell">Retail Sales</TableCell>
+              <TableCell className="table-cell">Wholesale Sales</TableCell>
+              <TableCell className="table-cell">Units Sold</TableCell>
+              <TableCell className="table-cell">Retailer Margin</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {salesData.map((salesData, index) => (
+              <TableRow key={index}>
+                <TableCell className="table-cell">
+                  {salesData.weekEnding}
+                </TableCell>
+                <TableCell className="table-cell">
+                  {formatCurrency(salesData.retailSales)}
+                </TableCell>
+                <TableCell className="table-cell">
+                  {formatCurrency(salesData.wholesaleSales)}
+                </TableCell>
+                <TableCell className="table-cell">
+                  {salesData.unitsSold}
+                </TableCell>
+                <TableCell className="table-cell">
+                  {formatCurrency(salesData.retailerMargin)}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 };
 

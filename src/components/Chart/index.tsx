@@ -38,13 +38,13 @@ const Chart: React.FC<ChartProps> = ({ salesData }) => {
         <Line
           type="monotone"
           dataKey="retailSales"
-          stroke="#8884d8"
+          stroke="#4dabf6"
           name={displayKey('retailSales')}
         />
         <Line
           type="monotone"
           dataKey="wholesaleSales"
-          stroke="#000000"
+          stroke="#9ca7c0"
           name={displayKey('wholesaleSales')}
         />
         <Line

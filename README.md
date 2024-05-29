@@ -6,7 +6,7 @@ There are also a couple test to make sure the data is being fetch correctly.
 
 Please let me know any comments or feedback. 
 
-### To Run the project Locally follow run the following commands.
+### To Run the project Locally run the following commands.
 
 #### `npm start`
 

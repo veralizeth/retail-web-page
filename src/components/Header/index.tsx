@@ -1,10 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import Logo from './Logo/index';
+import './index.scss';
 
 const Header: React.FC = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="app-bar">
       <Toolbar className="header">
         <Logo />
       </Toolbar>
@@ -14,4 +15,4 @@ const Header: React.FC = () => {
 
 export default Header;
 
-//#052849
+

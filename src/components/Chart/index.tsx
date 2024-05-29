@@ -55,7 +55,7 @@ const Chart: React.FC<ChartProps> = ({ salesData }) => {
           <Line
             type="monotone"
             dataKey="retailerMargin"
-            stroke="#008000"
+            stroke="#052849"
             strokeWidth={3}
             dot={false}
             name={displayKey('retailerMargin')}

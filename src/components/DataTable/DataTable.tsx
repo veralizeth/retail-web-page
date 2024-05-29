@@ -17,7 +17,6 @@ interface DataTableProps {
 }
 
 const DataTable: React.FC<DataTableProps> = ({ salesData }) => {
-  console.log(salesData);
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',

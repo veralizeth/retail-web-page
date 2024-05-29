@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/veralizeth/retail-web-page/static/css/main.2e5bb8b6.css",
-    "main.js": "/veralizeth/retail-web-page/static/js/main.66d74736.js",
-    "static/js/453.7af98e98.chunk.js": "/veralizeth/retail-web-page/static/js/453.7af98e98.chunk.js",
-    "index.html": "/veralizeth/retail-web-page/index.html",
-    "main.2e5bb8b6.css.map": "/veralizeth/retail-web-page/static/css/main.2e5bb8b6.css.map",
-    "main.66d74736.js.map": "/veralizeth/retail-web-page/static/js/main.66d74736.js.map",
-    "453.7af98e98.chunk.js.map": "/veralizeth/retail-web-page/static/js/453.7af98e98.chunk.js.map"
+    "main.css": "/retail-web-page/static/css/main.2e5bb8b6.css",
+    "main.js": "/retail-web-page/static/js/main.07fcabcd.js",
+    "static/js/453.7af98e98.chunk.js": "/retail-web-page/static/js/453.7af98e98.chunk.js",
+    "index.html": "/retail-web-page/index.html",
+    "main.2e5bb8b6.css.map": "/retail-web-page/static/css/main.2e5bb8b6.css.map",
+    "main.07fcabcd.js.map": "/retail-web-page/static/js/main.07fcabcd.js.map",
+    "453.7af98e98.chunk.js.map": "/retail-web-page/static/js/453.7af98e98.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2e5bb8b6.css",
-    "static/js/main.66d74736.js"
+    "static/js/main.07fcabcd.js"
   ]
 }

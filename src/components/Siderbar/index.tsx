@@ -10,7 +10,7 @@ interface SidebarProps {
   tags: string[];
 }
 
-// It is always a good practice to pass the name of the props instead of just props.
+// It is always a good practice to pass the name of the props instead of just props
 const Sidebar: React.FC<SidebarProps> = ({ title, image, subtitle, tags }) => {
   return (
     <Paper className="paper-container">

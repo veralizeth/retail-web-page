@@ -1,10 +1,10 @@
-# Retail store StackLine
+# Retail store Metrics
 
-This project was created using React and TypeScript. 
+This project was created using React and TypeScript.
 
-A couple of tests also ensure the data is being fetched correctly. 
+A couple of tests also ensure the data is being fetched correctly.
 
-Please let me know if you have any comments or feedback. 
+Please let me know if you have any comments or feedback.
 
 ### To Run the project Locally, run the following commands.
 

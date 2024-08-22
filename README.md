@@ -2,15 +2,15 @@
 
 This project was created using React and TypeScript. 
 
-There are also a couple test to make sure the data is being fetch correctly. 
+A couple of tests also ensure the data is being fetched correctly. 
 
-Please let me know any comments or feedback. 
+Please let me know if you have any comments or feedback. 
 
-### To Run the project Locally run the following commands.
+### To Run the project Locally, run the following commands.
 
 #### `npm start`
 
-Runs the app in the development mode.\
+It runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
